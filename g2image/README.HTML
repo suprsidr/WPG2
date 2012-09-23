@@ -1,0 +1,172 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Gallery2 Image Chooser README.HTML</title>
+	<link rel="stylesheet" href="css/readme.css" type="text/css" />
+</head>
+<body>
+<div id="main" >
+	<h2>Gallery 2 Image Chooser</h2>
+	<p>Version 3.0.2 - See <a href="CHANGELOG.HTML">CHANGELOG.HTML</a> for change history<br />
+	Author: <a href="http://www.steffensenfamily.com/" >Kirk Steffensen</a><br />
+	Information Page: <a href="http://g2image.steffensenfamily.com/">g2image.steffensenfamily.com</a><br />
+	Support Forum: <a href="http://gallery.menalto.com/forum/94">gallery.menalto.com/forum/94</a><br />
+	Live Demo: <a href="http://demo.steffensenfamily.com/">demo.steffensenfamily.com</a><br />
+	Live Blog Demo: <a href="http://demo.steffensenfamily.com/wordpress/">demo.steffensenfamily.com/wordpress/</a><br />
+	See <a href="CREDITS.HTML">CREDITS.HTML</a> for inspiration/code credits</p>
+
+	<h2>WordPress Users STOP!!!</h2>
+
+	<ul>
+		<li>WordPress Users should install WPG2 3.0, which includes G2Image in it's entirety.
+		See <a href="http://g2image.steffensenfamily.com/index.php?title=WordPress">
+		this note</a> for a longer explanation.
+		<li>G2Image 3.0.1 is not backwards compatible with WPG2 2.1 or earlier.
+	</ul>
+
+	<h3>I - REQUIREMENTS</h3>
+
+	<ol>
+		<li>To use the "Gallery 2 Image Chooser" plugin, you must have <a href="http://gallery.menalto.com/" >Gallery2</a>
+		installed and properly configured:
+		<ul>
+			<li>You must have <a href="http://codex.gallery2.org/index.php?title=Gallery2:Download">Gallery2 2.1.x or higher.</a>
+			<li><strong>NOTE:</strong> This version WILL NOT WORK with Gallery2 version 2.0.x
+			<ul>
+				<li>Use version 1.3.5 of the plugin if you need to use Gallery2 version 2.0.x
+			</ul>
+		</ul>
+
+		<li>The plugin was designed to be used with <a href="http://tinymce.moxiecode.com/" >TinyMCE.</a>
+		<ul>
+			<li>You must have TinyMCE version 2.0.3 or higher.
+			<li>Tested with TinyMCE included with WordPress 2.2 and Joomla 1.0.13.
+			<li>Tested with JCE 1.1.1 (includes TinyMCE) for Joomla.
+		</ul>
+
+		<li>The plugin was also designed to be used with <a href="http://www.fckeditor.net/" >FCKEditor.</a>
+		<ul>
+			<li>Tested with FCKEditor version 2.4.3 in WordPress and Drupal.</a>.
+		</ul>
+
+		<li>Finally, the plugin was also designed to be used in a standalone mode without a visual editor like TinyMCE or FCKEditor.
+		<ul>
+			<li>To use the plugin without TinyMCE (in an application other than WordPress), please see the
+			<a href="http://g2image.steffensenfamily.com/index.php?title=Developers_Notes">G2Image Developers Notes Page</a>.
+		</ul>
+
+		<li>Tested with IE 7.0 and Firefox 2.0.
+
+	</ol>
+
+	<h3>II - INSTALLATION</h3>
+
+	<ol>
+		<li>Unzip the files.
+
+		<li>Check config.php to make sure that $g2ic_gallery2_path is pointing to your Gallery2 directory.  ($g2ic_gallery2_path is relative to the server root, unless $g2ic_use_full_path is set to TRUE, in which case it is the full server path to Gallery2.)  If you are using
+		an embedded application (other than WordPress) match the embedded paths, etc., at the bottom of config.php with the
+		settings in your embedded application.
+
+		<li>FTP the "g2image/" directory structure to a new folder called g2image in your TinyMCE or FCKEditor plugins directory.
+		<ul>
+			<li>If you are not using G2Image with TinyMCE or FCKEditor (as documented on the
+			<a href="http://g2image.steffensenfamily.com/index.php?title=Developers_Notes">G2Image Developers Notes Page</a>),
+			you can install the /g2image/ directory wherever it makes the most sense for your installation.
+		</ul>
+
+		<li>Please see the appropriate online page for platform-specific installation information.
+		(This information changes more frequently than this README file is updated.  The list is alphabetical,
+		not a suggested order of preference.)
+
+		<ul>
+		<li><a href="http://g2image.steffensenfamily.com/index.php?title=Drupal">Drupal</a>
+		<li><a href="http://g2image.steffensenfamily.com/index.php?title=Joomla">Joomla!</a>
+		<li><a href="http://g2image.steffensenfamily.com/index.php?title=WordPress">WordPress</a>
+		<li><a href="http://g2image.steffensenfamily.com/index.php?title=FCKEditor">FCKEditor</a>
+		<li><a href="http://g2image.steffensenfamily.com/index.php?title=Other_Platforms">Other Platforms</a>
+		</ul>
+		</ul>
+
+		<li><strong>After everything is installed, force a reload (for FireFox) or a refresh
+		(for IE).</strong>  This forces the TinyMCE javascript to reload and display the button.
+
+		<li>There are several options that you can set in config.php, such as default
+		view, default number of images, default class, and more.  There are notes for each
+		configuration option in the config.php file.
+
+		<li>CSS for the alignment options:
+
+		<ul>
+			<li>If you want to use the built-in alignment options, you'll need to add these
+			three classes to your CSS.  You can also add upto four custom classes and add
+			them to the config.php file.  Custom classes will be available in the alignment
+			selector.
+
+			<li>You'll need to customize these to fit into your site design.  This is how
+			they're implemented in the CSS for www.steffensenfamily.com:
+
+			<div class="codeblock" >
+<pre>
+.g2image_normal
+{
+	margin: 4px;
+}
+
+.g2image_float_left
+{
+	float: left;
+	clear: left;
+	margin: 4px;
+}
+
+.g2image_float_right
+{
+	float: right;
+	clear: right;
+	margin: 4px;
+}
+
+.g2image_centered
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+</pre>
+			</div>
+
+			<li>Note: The alignment classes only apply to HTML thumbnails, WPG2/WPG2ID tags, and
+			Drupal G2 Filter tags - not the text links.
+		</ul>
+
+		<li>Language Support:
+		<ul>
+			<li>Version 3.0.1 shipped with support for de, en, es, fr, hu, it, ko, nb, nl, pl, zh_TW.
+			<li>Set your language by changing $g2ic_language in config.php.
+			<li>For information on updating existing translations or creating new translations, please
+			see the <a href="http://g2image.steffensenfamily.com/index.php?title=Internationalization/Languages_Page">
+			G2Image Internationalization Page</a>.
+		</ul>
+	</ol>
+
+	<h3>III - ABOUT THE LICENSE</h3>
+
+	<p>This program is free software; you can redistribute it and/or
+	modify it under the terms of the GNU General Public License
+	as published by the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.</p>
+
+	<p>This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details, in the <a href="LICENSE.HTML">LICENSE.HTML</a> file.</p>
+
+	<p>If you have not received a copy of this file along with this program, write to:<br />
+	The Free Software Foundation, Inc.<br />
+	59 Temple Place - Suite 330<br />
+	Boston, MA  02111-1307<br />
+	USA</p>
+</div>
+</body>
+</html>

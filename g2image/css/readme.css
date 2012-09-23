@@ -1,0 +1,25 @@
+/* CSS file for g2image plugin popup */
+
+body {
+	margin: 10px;
+}
+
+h1, h2, h3 {
+	margin: 12px 0px 12px 0px;
+}
+
+p {
+	margin: 6px 0px 6px 0px;
+}
+ul, ol, li {
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+#main {
+	width: 600px;
+}
+
+.codeblock {
+	margin: 6px 30px 6px 30px;
+}

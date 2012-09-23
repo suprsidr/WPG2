@@ -1,0 +1,275 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: G2Image v3.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2007-09-04 08:24-0500\n"
+"Last-Translator: Kirk Steffensen <blogger@steffensenfamily.com>\n"
+"Language-Team: G2Image Development Team <blogger@steffensenfamily.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: C:\\Program Files\\xampp\\htdocs\\wordpress\\wp-content\\"
+"plugins\\wpg2\\\n"
+"X-Poedit-KeywordsList: T_\n"
+"X-Poedit-SearchPath-0: g2image\n"
+
+#: g2image/g2image.php:110
+msgid "Error loading album entity"
+msgstr ""
+
+#: g2image/g2image.php:157
+msgid "Thumbnail with link to image"
+msgstr ""
+
+#: g2image/g2image.php:158
+msgid "Thumbnail with link to parent album"
+msgstr ""
+
+#: g2image/g2image.php:159
+msgid "Thumbnail with LightBox link to Fullsized Image"
+msgstr ""
+
+#: g2image/g2image.php:160
+msgid "Thumbnail with link to custom URL (from text box below)"
+msgstr ""
+
+#: g2image/g2image.php:161
+msgid "Thumbnail only - no link"
+msgstr ""
+
+#: g2image/g2image.php:162
+msgid "Fullsized image with link to Gallery page for image"
+msgstr ""
+
+#: g2image/g2image.php:163
+msgid "Fullsized image only - no link"
+msgstr ""
+
+#: g2image/g2image.php:164
+msgid "Text link to image"
+msgstr ""
+
+#: g2image/g2image.php:165
+msgid "Text link to parent album"
+msgstr ""
+
+#: g2image/g2image.php:170
+msgid "HTML"
+msgstr ""
+
+#: g2image/g2image.php:175
+msgid "WPG2 tag of image"
+msgstr ""
+
+#: g2image/g2image.php:176
+msgid "Drupal Gallery2 Module filter tag"
+msgstr ""
+
+#: g2image/g2image.php:246
+msgid "Error loading thumbnails"
+msgstr ""
+
+#: g2image/g2image.php:251
+msgid "Error loading album items"
+msgstr ""
+
+#: g2image/g2image.php:371
+#: g2image/g2image.php:748
+msgid "Gallery2 Image Chooser"
+msgstr ""
+
+#: g2image/g2image.php:371
+msgid "Version"
+msgstr ""
+
+#: g2image/g2image.php:372
+msgid "Documentation:"
+msgstr ""
+
+#: g2image/g2image.php:373
+msgid "About G2Image"
+msgstr ""
+
+#: g2image/g2image.php:399
+msgid "Expand all"
+msgstr ""
+
+#: g2image/g2image.php:399
+msgid "Collapse all"
+msgstr ""
+
+#: g2image/g2image.php:460
+msgid "None"
+msgstr ""
+
+#: g2image/g2image.php:461
+msgid "Normal"
+msgstr ""
+
+#: g2image/g2image.php:462
+msgid "Float Left"
+msgstr ""
+
+#: g2image/g2image.php:463
+msgid "Float Right"
+msgstr ""
+
+#: g2image/g2image.php:464
+msgid "Centered"
+msgstr ""
+
+#: g2image/g2image.php:499
+msgid "Insertion Options"
+msgstr ""
+
+#: g2image/g2image.php:500
+msgid "How to Insert Image"
+msgstr ""
+
+#: g2image/g2image.php:514
+msgid "Custom URL"
+msgstr ""
+
+#: g2image/g2image.php:529
+msgid "Text for text link"
+msgstr ""
+
+#: g2image/g2image.php:544
+msgid "LightBox Group (Leave blank to not group with other images)"
+msgstr ""
+
+#: g2image/g2image.php:567
+msgid "WPG2 tag \"size\" attribute (Leave blank for the default size of: "
+msgstr ""
+
+#: g2image/g2image.php:592
+msgid ""
+"Drupal G2 Filter \"exactsize\" attribute (Leave blank for no exactsize "
+"attribute)"
+msgstr ""
+
+#: g2image/g2image.php:601
+#: g2image/g2image.php:705
+#: g2image/g2image.php:956
+msgid "G2Image Alignment Class"
+msgstr ""
+
+#: g2image/g2image.php:607
+msgid "Press button to insert checked image(s)"
+msgstr ""
+
+#: g2image/g2image.php:611
+#: g2image/g2image.php:713
+#: g2image/g2image.php:964
+msgid "Insert"
+msgstr ""
+
+#: g2image/g2image.php:613
+msgid "Check all"
+msgstr ""
+
+#: g2image/g2image.php:613
+msgid "Uncheck all"
+msgstr ""
+
+#: g2image/g2image.php:635
+msgid "Gallery2 Title (A-z)"
+msgstr ""
+
+#: g2image/g2image.php:636
+msgid "Gallery2 Title (z-A)"
+msgstr ""
+
+#: g2image/g2image.php:637
+msgid "Origination Time (Newest First)"
+msgstr ""
+
+#: g2image/g2image.php:638
+msgid "Origination Time (Oldest First)"
+msgstr ""
+
+#: g2image/g2image.php:639
+msgid "Last Modification (Newest First)"
+msgstr ""
+
+#: g2image/g2image.php:640
+msgid "Last Modification (Oldest First)"
+msgstr ""
+
+#: g2image/g2image.php:646
+msgid "Display Options"
+msgstr ""
+
+#: g2image/g2image.php:647
+msgid "Sorted by:"
+msgstr ""
+
+#: g2image/g2image.php:649
+msgid "Per Page:"
+msgstr ""
+
+#: g2image/g2image.php:658
+msgid "All"
+msgstr ""
+
+#: g2image/g2image.php:673
+msgid "Thumbnails"
+msgstr ""
+
+#: g2image/g2image.php:681
+msgid "Thumbnails with info"
+msgstr ""
+
+#: g2image/g2image.php:702
+msgid "Insert a Drupal G2 Filter tag for the current album:"
+msgstr ""
+
+#: g2image/g2image.php:717
+#: g2image/g2image.php:968
+msgid "Set the Alignment Class in \"Insertion Options\" below"
+msgstr ""
+
+#: g2image/g2image.php:734
+msgid ""
+"There are no photos in this album.<br /><br />Please pick another album from "
+"the navigation options above."
+msgstr ""
+
+#: g2image/g2image.php:808
+msgid "Title:"
+msgstr ""
+
+#: g2image/g2image.php:809
+msgid "Summary:"
+msgstr ""
+
+#: g2image/g2image.php:810
+msgid "Description:"
+msgstr ""
+
+#: g2image/g2image.php:891
+msgid "Page Navigation:"
+msgstr ""
+
+#: g2image/g2image.php:892
+msgid "Page:"
+msgstr ""
+
+#: g2image/g2image.php:953
+msgid "Insert a WPG2 tag for the current album:"
+msgstr ""
+
+#: g2image/init.php:173
+msgid ""
+"<h3>Fatal Gallery2 Error: Cannot activate the Gallery2 Embedded "
+"functions.</h3><br />For WordPress users, Validate WPG2 in the Options Admin "
+"panel.<br /><br />For other platforms, please verify your Gallery2 path in "
+"config.php."
+msgstr ""
+
+#: g2image/init.php:206
+msgid "<h3>Fatal Gallery2 error:</h3><br />Here's the error from G2:"
+msgstr ""

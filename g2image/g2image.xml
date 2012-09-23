@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<mosinstall version="1.1.0" type="jceplugin" plugin="g2image">
+    <name>Gallery2 Image Chooser</name>
+    <version>3.0.2</version>
+    <creationDate>10/01/2007</creationDate>
+    <author>Kirk Steffensen</author>
+    <authorEmail>blogger (at sign) steffensenfamily (dot) com</authorEmail>
+    <authorUrl>http://g2image.steffensenfamily.com/</authorUrl>
+    <copyright>Kirk Steffensen</copyright>
+    <license>GPL</license>
+    <description>Gallery2 Image Chooser plugin for JCE</description>
+    <icon>g2image</icon>
+    <layout_icon>g2image</layout_icon>
+    <elements></elements>
+    <files>
+        <filename plugin="g2image">editor_plugin.js</filename>
+        <filename>CHANGELOG.HTML</filename>
+        <filename>config.php</filename>
+        <filename>CREDITS.HTML</filename>
+        <filename>editor_plugin.js</filename>
+        <filename>editor_plugin_src.js</filename>
+        <filename>g2image.php</filename>
+        <filename>g2image.xml</filename>
+        <filename>gettext.inc</filename>
+        <filename>gettext.php</filename>
+        <filename>init.php</filename>
+        <filename>LICENSE.HTML</filename>
+        <filename>README.HTML</filename>
+        <filename>streams.php</filename>
+        <filename>css/dtree.css</filename>
+        <filename>css/g2image.css</filename>
+        <filename>css/lightbox.css</filename>
+        <filename>css/readme.css</filename>
+        <filename>images/blank.gif</filename>
+        <filename>images/close.gif</filename>
+        <filename>images/closelabel.gif</filename>
+        <filename>images/g2image.gif</filename>
+        <filename>images/loading.gif</filename>
+        <filename>images/magnifier.gif</filename>
+        <filename>images/next.gif</filename>
+        <filename>images/nextlabel.gif</filename>
+        <filename>images/prev.gif</filename>
+        <filename>images/prevlabel.gif</filename>
+        <filename>img/base.gif</filename>
+        <filename>img/empty.gif</filename>
+        <filename>img/folder.gif</filename>
+        <filename>img/folderopen.gif</filename>
+        <filename>img/join.gif</filename>
+        <filename>img/joinbottom.gif</filename>
+        <filename>img/line.gif</filename>
+        <filename>img/minus.gif</filename>
+        <filename>img/minusbottom.gif</filename>
+        <filename>img/nolines_minus.gif</filename>
+        <filename>img/nolines_plus.gif</filename>
+        <filename>img/page.gif</filename>
+        <filename>img/plus.gif</filename>
+        <filename>img/plusbottom.gif</filename>
+        <filename>jscripts/dtree.js</filename>
+        <filename>jscripts/effects.js</filename>
+        <filename>jscripts/functions.js</filename>
+        <filename>jscripts/lightbox.js</filename>
+        <filename>jscripts/popup.js</filename>
+        <filename>jscripts/prototype.js</filename>
+        <filename>jscripts/scriptaculous.js</filename>
+        <filename>langs/de.js</filename>
+        <filename>langs/de.mo</filename>
+        <filename>langs/en.js</filename>
+        <filename>langs/es.js</filename>
+        <filename>langs/es.mo</filename>
+        <filename>langs/fr.js</filename>
+        <filename>langs/fr.mo</filename>
+        <filename>langs/it.js</filename>
+        <filename>langs/it.mo</filename>
+        <filename>langs/nb.js</filename>
+        <filename>langs/nb.mo</filename>
+        <filename>langs/nl.js</filename>
+        <filename>langs/nl.mo</filename>
+        <filename>langs/hu.js</filename>
+        <filename>langs/hu.mo</filename>
+        <filename>langs/ko.js</filename>
+        <filename>langs/ko.mo</filename>
+        <filename>langs/pl.js</filename>
+        <filename>langs/pl.mo</filename>
+        <filename>langs/zh_TW.js</filename>
+        <filename>langs/zh_TW.mo</filename>
+    </files>
+    <params></params>
+</mosinstall>

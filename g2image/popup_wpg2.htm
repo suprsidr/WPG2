@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{$lang_g2image_wpg2_popup_title}</title>
+	<script language="javascript" type="text/javascript" src="../../../../wp-includes/js/tinymce/tiny_mce_popup.js"></script>
+	<script language="javascript" type="text/javascript" src="jscripts/popup.js"></script>
+</head>
+
+<body onload="tinyMCEPopup.executeOnLoad('init();');">
+    
+<form onsubmit="insertg2image();return false;" action="#">
+	
+	<p class="title">{$lang_g2image_wpg2_update}</p>
+	
+	<div style="border: 1px solid #aaa; margin-bottom:10px;padding:5px">		
+		<p>{$lang_g2image_wpg2_album_photo_name}<input name="file_name" type="text" id="width" value="" style="width: 565px; vertical-align: middle;" /></p>
+	</div>
+	
+	<div style="text-align:right" >	
+		<input type="button" name="insert" value="{$lang_update}" onclick="insertwpg2();" id="insert" />
+		<input type="button" name="cancel" value="{$lang_cancel}" onclick="cancelAction();" id="cancel" />
+	</div>
+	
+</form>
+
+</body>
+</html>

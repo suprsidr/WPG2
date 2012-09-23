@@ -1,0 +1,1336 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPG2 v3.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2007-09-12 07:14-0500\n"
+"Last-Translator: Kirk Steffensen <blogger@steffensenfamily.com>\n"
+"Language-Team: WPG2 Development Team <wpg2@wpg2next.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: C:\\Program Files\\xampp\\htdocs\\wordpress\\wp-content\\plugins\n"
+"X-Poedit-SearchPath-0: wpg2\n"
+
+#: wpg2/g2imageplugin.inc:42
+msgid "G2Image Page options saved."
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:52
+#: wpg2/wpg2managerewrites.inc:50
+#: wpg2/wpg2options.inc:82
+#: wpg2/wpg2options.inc:179
+#: wpg2/wpg2options.inc:273
+#: wpg2/wpg2options.inc:401
+#: wpg2/wpg2options.inc:527
+#: wpg2/wpg2options.inc:617
+#: wpg2/wpg2validate.inc:249
+#: wpg2/wpg2usersadmin.php:116
+msgid "Help"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:53
+msgid "G2Image Popup Options"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:59
+msgid "Thumbnails per Page:"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:65
+msgid "Default Image Sort Order:"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:68
+msgid "Gallery2 Title (A-z)"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:69
+msgid "Gallery2 Title (z-A)"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:70
+msgid "Origination Time (newest first)"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:71
+msgid "Origination Time (oldest first)"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:72
+msgid "Last Modification (newest first)"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:73
+msgid "Last Modification (oldest first)"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:78
+msgid "Default Display"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:80
+msgid "Thumbnails Only"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:81
+msgid "Thumbnails with Titles and Filenames"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:85
+msgid "Default Action:"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:87
+msgid "Choose the default \"How to Insert\" option."
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:89
+msgid "WPG2 Tag"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:90
+msgid "Thumbnail with link to image"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:91
+msgid "Thumbnail with link to parent album"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:92
+msgid "Thumbnail with LightBox link to Fullsized Image"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:93
+msgid "Thumbnail with link to custom URL"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:94
+msgid "Thumbnail only - no link"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:95
+msgid "Fullsized image with link to Gallery page for image"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:96
+msgid "Fullsized image only - no link"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:97
+msgid "Text link to image"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:98
+msgid "Text link to parent album"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:103
+msgid "Default Custom URL:"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:109
+msgid "G2Image Popup CSS Class Options"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:113
+msgid "Default Image Class:"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:116
+#: wpg2/wpg2options.inc:189
+#: wpg2/wpg2options.inc:204
+msgid "None"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:117
+msgid "Normal"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:118
+msgid "Float Left"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:119
+msgid "Float Right"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:120
+msgid "Centered"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:134
+msgid "This is the default CSS class applied to WPG2 tags and HTML thumbnails inserted using the G2Image popup window."
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:135
+msgid "Custom classes will be available as options after entering them below and hitting the \"Update Options\" button."
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:139
+msgid "Default Class Mode"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:141
+msgid "Class in the img tag - "
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:141
+msgid "(Recommended)"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:142
+msgid "Class in a div tag wrapper - "
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:143
+msgid "<br />NOTE: This setting only applies to images inserted as &lt;img&gt; tags, as WPG2 tag will always be wrapped with a div tag."
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:147
+msgid "Custom Classes:"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:149
+msgid "Custom Classes (a valid class in your CSS or \"not_used\")"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:151
+msgid "1. "
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:153
+msgid "3. "
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:156
+msgid "2. "
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:158
+msgid "4. "
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:163
+#: wpg2/wpg2managerewrites.inc:86
+#: wpg2/wpg2options.inc:105
+#: wpg2/wpg2options.inc:144
+#: wpg2/wpg2options.inc:229
+#: wpg2/wpg2options.inc:358
+#: wpg2/wpg2options.inc:454
+#: wpg2/wpg2options.inc:578
+#: wpg2/wpg2options.inc:696
+msgid "Update Options"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:169
+#: wpg2/wpg2managerewrites.inc:93
+#: wpg2/wpg2options.inc:235
+#: wpg2/wpg2options.inc:364
+#: wpg2/wpg2options.inc:460
+#: wpg2/wpg2options.inc:584
+#: wpg2/wpg2options.inc:702
+msgid "Options not available until WPG2 Plugin is Validated."
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:340
+#: wpg2/wpg2functions.inc:37
+msgid "WPG2"
+msgstr ""
+
+#: wpg2/g2imageplugin.inc:340
+msgid "Gallery2 Image Chooser"
+msgstr ""
+
+#: wpg2/wpg2embed.inc:165
+#: wpg2/wpg2embed.inc:183
+#: wpg2/wpg2embed.inc:192
+#: wpg2/wpg2embed.inc:212
+#: wpg2/wpg2embed.inc:225
+#: wpg2/wpg2embed.inc:234
+#: wpg2/wpg2embed.inc:245
+#: wpg2/wpg2embed.inc:253
+#: wpg2/wpg2embed.inc:280
+#: wpg2/wpg2embed.inc:290
+#: wpg2/wpg2embed.inc:314
+#: wpg2/wpg2embed.inc:331
+#: wpg2/wpg2embed.inc:343
+#: wpg2/wpg2embed.inc:448
+#: wpg2/wpg2embed.inc:456
+#: wpg2/wpg2embed.inc:543
+#: wpg2/wpg2embed.inc:688
+#: wpg2/wpg2embed.inc:805
+#: wpg2/wpg2embed.inc:860
+#: wpg2/wpg2embed.inc:984
+#: wpg2/wpg2embed.inc:1029
+#: wpg2/wpg2embed.inc:1131
+#: wpg2/wpg2functions.inc:294
+#: wpg2/wpg2functions.inc:326
+#: wpg2/wpg2managerewrites.inc:132
+#: wpg2/wpg2template.inc:54
+#: wpg2/wpg2frames.php:33
+msgid "Fatal G2 error"
+msgstr ""
+
+#: wpg2/wpg2embed.inc:165
+#: wpg2/wpg2embed.inc:183
+#: wpg2/wpg2embed.inc:192
+#: wpg2/wpg2embed.inc:212
+#: wpg2/wpg2embed.inc:225
+#: wpg2/wpg2embed.inc:234
+#: wpg2/wpg2embed.inc:245
+#: wpg2/wpg2embed.inc:253
+#: wpg2/wpg2embed.inc:280
+#: wpg2/wpg2embed.inc:290
+#: wpg2/wpg2embed.inc:314
+#: wpg2/wpg2embed.inc:331
+#: wpg2/wpg2embed.inc:343
+#: wpg2/wpg2embed.inc:448
+#: wpg2/wpg2embed.inc:456
+#: wpg2/wpg2embed.inc:543
+#: wpg2/wpg2embed.inc:688
+#: wpg2/wpg2embed.inc:805
+#: wpg2/wpg2embed.inc:860
+#: wpg2/wpg2embed.inc:984
+#: wpg2/wpg2embed.inc:1029
+#: wpg2/wpg2embed.inc:1131
+#: wpg2/wpg2functions.inc:294
+#: wpg2/wpg2functions.inc:326
+#: wpg2/wpg2managerewrites.inc:132
+#: wpg2/wpg2template.inc:54
+#: wpg2/wpg2frames.php:33
+msgid "Here's the error from G2: "
+msgstr ""
+
+#: wpg2/wpg2embed.inc:491
+msgid "There is no .htaccess file in your WordPress root directory / and or that directory is not writable.  Please create a writeable .htaccess in that directory."
+msgstr ""
+
+#: wpg2/wpg2embed.inc:514
+msgid "The .htaccess file in your WordPress root directory (where wp-config.php is located) is not writable.  Please CHMOD it to 644 (or 666 if 644 does not work)."
+msgstr ""
+
+#: wpg2/wpg2embed.inc:566
+msgid "NOT FOUND"
+msgstr ""
+
+#: wpg2/wpg2embed.inc:615
+#: wpg2/wpg2embed.inc:713
+#: wpg2/wpg2embed.inc:834
+msgid "WPG2 Plugin Not Validated"
+msgstr ""
+
+#: wpg2/wpg2embed.inc:635
+#: wpg2/wpg2functions.inc:42
+msgid "Sidebar Block"
+msgstr ""
+
+#: wpg2/wpg2embed.inc:709
+#: wpg2/wpg2embed.inc:830
+msgid "Function Not Configured"
+msgstr ""
+
+#: wpg2/wpg2embed.inc:734
+msgid "Sidebar Grid"
+msgstr ""
+
+#: wpg2/wpg2embed.inc:746
+#: wpg2/wpg2options.inc:205
+#: wpg2/wpg2options.inc:287
+msgid "Random Image"
+msgstr ""
+
+#: wpg2/wpg2embed.inc:749
+#: wpg2/wpg2options.inc:206
+#: wpg2/wpg2options.inc:288
+msgid "Recent Image"
+msgstr ""
+
+#: wpg2/wpg2embed.inc:752
+#: wpg2/wpg2options.inc:207
+#: wpg2/wpg2options.inc:290
+msgid "Random Album"
+msgstr ""
+
+#: wpg2/wpg2embed.inc:755
+#: wpg2/wpg2options.inc:208
+#: wpg2/wpg2options.inc:291
+msgid "Recent Album"
+msgstr ""
+
+#: wpg2/wpg2embed.inc:758
+msgid "Error"
+msgstr ""
+
+#: wpg2/wpg2embed.inc:826
+msgid "Unsupported Block Type"
+msgstr ""
+
+#: wpg2/wpg2embed.inc:877
+msgid "Expand all"
+msgstr ""
+
+#: wpg2/wpg2embed.inc:877
+msgid "Collapse all"
+msgstr ""
+
+#: wpg2/wpg2functions.inc:38
+msgid "WPG2 Paths"
+msgstr ""
+
+#: wpg2/wpg2functions.inc:39
+msgid "Gallery2 Rewrites"
+msgstr ""
+
+#: wpg2/wpg2functions.inc:40
+msgid "WPG2 Output"
+msgstr ""
+
+#: wpg2/wpg2functions.inc:41
+msgid "WPG2 Tags"
+msgstr ""
+
+#: wpg2/wpg2functions.inc:43
+msgid "Sidebar Grid Block"
+msgstr ""
+
+#: wpg2/wpg2functions.inc:44
+msgid "Lightbox"
+msgstr ""
+
+#: wpg2/wpg2functions.inc:47
+msgid "G2Image"
+msgstr ""
+
+#: wpg2/wpg2functions.inc:51
+msgid "Gallery2 Users"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:39
+msgid "Gallery2 Rewrite Module Activated."
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:51
+msgid "Gallery2 Rewrite Module: Validation Checklist "
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:69
+msgid "Gallery2 Rewrite Plugin:"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:72
+#: wpg2/wpg2managerewrites.inc:74
+msgid "rewrite_active"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:72
+#: wpg2/wpg2managerewrites.inc:74
+#: wpg2/wpg2validate.inc:173
+msgid "On"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:76
+#: wpg2/wpg2managerewrites.inc:78
+msgid "rewrite_disabled"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:76
+#: wpg2/wpg2validate.inc:176
+msgid "Off [Safe]"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:78
+#: wpg2/wpg2validate.inc:178
+msgid "Off"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:82
+msgid "Warning: Do not Activate until you have read the following: "
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:82
+msgid "Gallery2 simplified URL's may not correctly function in your hosting environment.  If you experience any problems (EG: 404 Errors) when navigating to your photos or albums, then please deactivate this setting."
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:115
+msgid "Wordpress Permalinks Active?"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:118
+#: wpg2/wpg2managerewrites.inc:145
+#: wpg2/wpg2managerewrites.inc:173
+#: wpg2/wpg2managerewrites.inc:196
+#: wpg2/wpg2managerewrites.inc:220
+#: wpg2/wpg2options.inc:627
+#: wpg2/wpg2options.inc:634
+#: wpg2/wpg2options.inc:641
+#: wpg2/wpg2options.inc:648
+#: wpg2/wpg2options.inc:685
+msgid "Yes"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:120
+#: wpg2/wpg2managerewrites.inc:147
+#: wpg2/wpg2managerewrites.inc:152
+#: wpg2/wpg2managerewrites.inc:175
+#: wpg2/wpg2managerewrites.inc:180
+#: wpg2/wpg2managerewrites.inc:198
+#: wpg2/wpg2managerewrites.inc:223
+#: wpg2/wpg2options.inc:628
+#: wpg2/wpg2options.inc:635
+#: wpg2/wpg2options.inc:642
+#: wpg2/wpg2options.inc:649
+#: wpg2/wpg2options.inc:686
+msgid "No"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:139
+msgid "Does Gallery2 Rewrite Plugin Exists?"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:156
+#: wpg2/wpg2managerewrites.inc:185
+#: wpg2/wpg2managerewrites.inc:202
+#: wpg2/wpg2managerewrites.inc:228
+msgid "Skipped Due to Previous Failure"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:162
+msgid "Can Gallery2 Rewrite Plugin be Activated?"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:190
+msgid "Is Gallery2 Rewrite using Apache Mod_Rewrite?"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:208
+msgid "Wordpress .htaccess can be updated?"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:215
+#: wpg2/wpg2validate.inc:53
+#: wpg2/wpg2validate.inc:66
+#: wpg2/wpg2validate.inc:79
+#: wpg2/wpg2validate.inc:96
+#: wpg2/wpg2validate.inc:114
+#: wpg2/wpg2validate.inc:133
+#: wpg2/wpg2validate.inc:151
+msgid "Failed"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:216
+msgid "Failed due to incomplete configuration. Please finish the installation of the rewrite plugin via the Gallery2 Site Admin -> Rewrite panel."
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:224
+msgid "Failed to update because "
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:253
+msgid "Error: Wordpress Permalinks are not Active"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:253
+msgid "In order to support Gallery2 Rewrite rules, you must have a Wordpress Permalinks Active, please Configure Wordpress Permalinks from the Wordpres Options Panel."
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:260
+msgid "Error: Gallery2 Rewrite Plugin does not Exist"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:260
+msgid "You must have not installed the Gallery2 Rewrite Plugin, please download/install the rewrite plugin from the Gallery2 Site Admin Plugin Get More Plugins Panel."
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:267
+msgid "Error: Gallery2 Rewrite Plugin cannot be activated"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:267
+msgid "WPG2 cannot remotely activate the Gallery2 Rewrite Plugin.  Please manually configure the Gallery2 Rewrite Plugin from the Gallery2 Site Admin Plugin Panel."
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:273
+msgid "Error: Gallery2 Rewrite Rules Failed to be updated"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:280
+msgid "Error: Gallery2 Rewrite is not using mod_rewrite"
+msgstr ""
+
+#: wpg2/wpg2managerewrites.inc:280
+msgid "Gallery2 Rewrite module is not using Apache mod_rewrite and cannot be supported within the Wordpress Environment, please configure the Gallery2 Rewrite Module to use Apache Mod_Write."
+msgstr ""
+
+#: wpg2/wpg2options.inc:64
+msgid "URL to your Gallery2 "
+msgstr ""
+
+#: wpg2/wpg2options.inc:68
+msgid "URL to your Gallery2 is Empty."
+msgstr ""
+
+#: wpg2/wpg2options.inc:75
+msgid "WPG2 plugin cannot include the Gallery2 file "
+msgstr ""
+
+#: wpg2/wpg2options.inc:86
+#: wpg2/wpg2options.inc:88
+msgid "WPG2 Paths Validation Status: "
+msgstr ""
+
+#: wpg2/wpg2options.inc:86
+msgid "Valid"
+msgstr ""
+
+#: wpg2/wpg2options.inc:88
+msgid "Invalid"
+msgstr ""
+
+#: wpg2/wpg2options.inc:89
+msgid "Tip: Paste/Enter your Gallery2 URL (EG: http://www.domain.com/gallery2/main.php) into the Auto Configuration Gallery2 URL Field and click on Update Options."
+msgstr ""
+
+#: wpg2/wpg2options.inc:96
+msgid "Automatic Configuration of WPG2 Embedded Paths"
+msgstr ""
+
+#: wpg2/wpg2options.inc:98
+#: wpg2/wpg2options.inc:115
+msgid "Gallery2 URL:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:100
+msgid "Enter your Gallery2 URL by naviging to your Gallery2 Home Page and pasting in the URL from the browser window."
+msgstr ""
+
+#: wpg2/wpg2options.inc:111
+msgid "Manual Adjustment of WPG2 Embedded Paths"
+msgstr ""
+
+#: wpg2/wpg2options.inc:112
+msgid "Caution: Take care when editing any of these values, as incorrect values could return broken urls."
+msgstr ""
+
+#: wpg2/wpg2options.inc:118
+msgid "URL to your Gallery2 Installation."
+msgstr ""
+
+#: wpg2/wpg2options.inc:118
+msgid "Example: http://www.domain.com/gallery2/"
+msgstr ""
+
+#: wpg2/wpg2options.inc:122
+msgid "URI to Gallery2 Embed Page:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:128
+msgid "Gallery2 File Path:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:131
+msgid "This is the File path to your Gallery2 installation.<br />Example: /home/username/public_html/gallery2/"
+msgstr ""
+
+#: wpg2/wpg2options.inc:135
+msgid "On Gallery Error Redirect to:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:138
+msgid "The page you want to redirect to if there is a Gallery login error."
+msgstr ""
+
+#: wpg2/wpg2options.inc:138
+msgid "Example: http://www.domain.com/index.php"
+msgstr ""
+
+#: wpg2/wpg2options.inc:169
+msgid "Sidebar Grid Block options saved."
+msgstr ""
+
+#: wpg2/wpg2options.inc:180
+msgid "Sidebar Grid Block Options"
+msgstr ""
+
+#: wpg2/wpg2options.inc:186
+msgid "Number of Grid Blocks to Display:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:190
+msgid "One"
+msgstr ""
+
+#: wpg2/wpg2options.inc:191
+msgid "Two"
+msgstr ""
+
+#: wpg2/wpg2options.inc:192
+msgid "Three"
+msgstr ""
+
+#: wpg2/wpg2options.inc:193
+msgid "Four"
+msgstr ""
+
+#: wpg2/wpg2options.inc:194
+msgid "Five"
+msgstr ""
+
+#: wpg2/wpg2options.inc:195
+msgid "Six"
+msgstr ""
+
+#: wpg2/wpg2options.inc:196
+msgid "Seven"
+msgstr ""
+
+#: wpg2/wpg2options.inc:197
+msgid "Eight"
+msgstr ""
+
+#: wpg2/wpg2options.inc:198
+msgid "Nine"
+msgstr ""
+
+#: wpg2/wpg2options.inc:201
+msgid "Type of Grid Block:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:212
+msgid "Sidebar Grid Thumbnail Size:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:217
+msgid "Sidebar Grid Image Details:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:219
+#: wpg2/wpg2options.inc:306
+#: wpg2/wpg2options.inc:445
+msgid "Choose the any additional information to be displayed."
+msgstr ""
+
+#: wpg2/wpg2options.inc:222
+#: wpg2/wpg2options.inc:315
+msgid "Heading"
+msgstr ""
+
+#: wpg2/wpg2options.inc:259
+msgid "Sidebar Block options saved."
+msgstr ""
+
+#: wpg2/wpg2options.inc:274
+msgid "Sidebar Image Options"
+msgstr ""
+
+#: wpg2/wpg2options.inc:280
+msgid "Sidebar Block:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:283
+msgid "Choose the type of block to display, one or more possible blocks may be checked."
+msgstr ""
+
+#: wpg2/wpg2options.inc:289
+msgid "Viewed Image"
+msgstr ""
+
+#: wpg2/wpg2options.inc:292
+msgid "Viewed Album"
+msgstr ""
+
+#: wpg2/wpg2options.inc:293
+msgid "Daily Image"
+msgstr ""
+
+#: wpg2/wpg2options.inc:294
+msgid "Weekly Image"
+msgstr ""
+
+#: wpg2/wpg2options.inc:295
+msgid "Monthly Image"
+msgstr ""
+
+#: wpg2/wpg2options.inc:296
+msgid "Daily Album"
+msgstr ""
+
+#: wpg2/wpg2options.inc:297
+msgid "Weekly Album"
+msgstr ""
+
+#: wpg2/wpg2options.inc:298
+msgid "Monthly Album"
+msgstr ""
+
+#: wpg2/wpg2options.inc:303
+msgid "Sidebar Block Details:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:310
+#: wpg2/wpg2options.inc:448
+msgid "Title"
+msgstr ""
+
+#: wpg2/wpg2options.inc:311
+msgid "Date"
+msgstr ""
+
+#: wpg2/wpg2options.inc:312
+msgid "Views"
+msgstr ""
+
+#: wpg2/wpg2options.inc:314
+msgid "Owner"
+msgstr ""
+
+#: wpg2/wpg2options.inc:316
+msgid "FullSize"
+msgstr ""
+
+#: wpg2/wpg2options.inc:321
+msgid "Sidebar image Size:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:327
+msgid "Sidebar Item Frame:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:342
+msgid "Sidebar Album Frame:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:388
+msgid "WPG2 Tag options saved."
+msgstr ""
+
+#: wpg2/wpg2options.inc:402
+msgid "WPG2 Tag Options"
+msgstr ""
+
+#: wpg2/wpg2options.inc:408
+msgid "WPG2 Tag Default Image Size:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:414
+msgid "WPG2 Tag Item Frame:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:429
+msgid "WPG2 Tag Album Frame:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:443
+msgid "WPG2 Tag Image Details:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:516
+msgid "WPG2 Page, Style & CSS Options Saved."
+msgstr ""
+
+#: wpg2/wpg2options.inc:528
+msgid "WPG2 Page, Style & CSS Options"
+msgstr ""
+
+#: wpg2/wpg2options.inc:534
+msgid "WPG2 Output via Wordpress Page"
+msgstr ""
+
+#: wpg2/wpg2options.inc:540
+msgid "Page Title:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:546
+msgid "Page Slug:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:552
+msgid "WPG2 Output via Standalone Gallery2 Page"
+msgstr ""
+
+#: wpg2/wpg2options.inc:558
+msgid "CSS Style Elements Header<br/>(N/A when using Custom wpg2header)<br/>Stylesheet Elements to be dynamically added to the Wordpress Header prior to &lt;/head&gt;"
+msgstr ""
+
+#: wpg2/wpg2options.inc:564
+msgid "Simple Style Elements Header<br/>(N/A when using Custom wpg2header)<br/>Styling Elements to be dynamically added to the Wordpress Header after &lt;body&gt;"
+msgstr ""
+
+#: wpg2/wpg2options.inc:570
+msgid "Simple Style Elements Footer<br/>(N/A when using Custom wpg2footer)<br/>Styling Elements to be dynamically added to the Wordpress Footer prior to &lt;/body&gt;"
+msgstr ""
+
+#: wpg2/wpg2options.inc:608
+msgid "Lightbox options saved."
+msgstr ""
+
+#: wpg2/wpg2options.inc:618
+msgid "Lightbox Options"
+msgstr ""
+
+#: wpg2/wpg2options.inc:624
+msgid "Enable Internal Lightbox Script?"
+msgstr ""
+
+#: wpg2/wpg2options.inc:631
+msgid "Should WPG2 Tags have Lightbox Support?"
+msgstr ""
+
+#: wpg2/wpg2options.inc:638
+msgid "Should Sidebar Images have Lightbox Support?"
+msgstr ""
+
+#: wpg2/wpg2options.inc:645
+msgid "Should Gallery2 have Lightbox Support?"
+msgstr ""
+
+#: wpg2/wpg2options.inc:650
+msgid " <-- Only Valid when using Gallery2 Lightbox Enabled Theme"
+msgstr ""
+
+#: wpg2/wpg2options.inc:652
+msgid "Lightbox Opacity:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:655
+msgid "0.1"
+msgstr ""
+
+#: wpg2/wpg2options.inc:656
+msgid "0.2"
+msgstr ""
+
+#: wpg2/wpg2options.inc:657
+msgid "0.3"
+msgstr ""
+
+#: wpg2/wpg2options.inc:658
+msgid "0.4"
+msgstr ""
+
+#: wpg2/wpg2options.inc:659
+msgid "0.5"
+msgstr ""
+
+#: wpg2/wpg2options.inc:660
+msgid "0.6"
+msgstr ""
+
+#: wpg2/wpg2options.inc:661
+msgid "0.7"
+msgstr ""
+
+#: wpg2/wpg2options.inc:662
+msgid "0.8"
+msgstr ""
+
+#: wpg2/wpg2options.inc:663
+msgid "0.9"
+msgstr ""
+
+#: wpg2/wpg2options.inc:664
+msgid "1.0"
+msgstr ""
+
+#: wpg2/wpg2options.inc:665
+#: wpg2/wpg2options.inc:680
+#: wpg2/wpg2options.inc:687
+msgid " <-- Only Valid when (internal) Lightscript is Enabled"
+msgstr ""
+
+#: wpg2/wpg2options.inc:667
+msgid "Lightbox (Re)draw Popup Speed:"
+msgstr ""
+
+#: wpg2/wpg2options.inc:670
+msgid "1"
+msgstr ""
+
+#: wpg2/wpg2options.inc:671
+msgid "2"
+msgstr ""
+
+#: wpg2/wpg2options.inc:672
+msgid "3"
+msgstr ""
+
+#: wpg2/wpg2options.inc:673
+msgid "4"
+msgstr ""
+
+#: wpg2/wpg2options.inc:674
+msgid "5"
+msgstr ""
+
+#: wpg2/wpg2options.inc:675
+msgid "6"
+msgstr ""
+
+#: wpg2/wpg2options.inc:676
+msgid "7"
+msgstr ""
+
+#: wpg2/wpg2options.inc:677
+msgid "8"
+msgstr ""
+
+#: wpg2/wpg2options.inc:678
+msgid "9"
+msgstr ""
+
+#: wpg2/wpg2options.inc:679
+msgid "10"
+msgstr ""
+
+#: wpg2/wpg2options.inc:682
+msgid "Lightbox Animate (Re)draw Popup?"
+msgstr ""
+
+#: wpg2/wpg2options.inc:689
+msgid "Lightbox Image Minimum Height:"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:48
+msgid "Wordpress Compatible?"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:50
+#: wpg2/wpg2validate.inc:63
+#: wpg2/wpg2validate.inc:77
+#: wpg2/wpg2validate.inc:93
+#: wpg2/wpg2validate.inc:100
+#: wpg2/wpg2validate.inc:112
+#: wpg2/wpg2validate.inc:131
+#: wpg2/wpg2validate.inc:149
+msgid "Success"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:59
+msgid "URI to Gallery2 Ok?"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:69
+#: wpg2/wpg2validate.inc:83
+#: wpg2/wpg2validate.inc:101
+#: wpg2/wpg2validate.inc:118
+#: wpg2/wpg2validate.inc:138
+#: wpg2/wpg2validate.inc:156
+msgid "Skipped Due to Validation Error"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:74
+msgid "Gallery2 can be located in G2 File Path?"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:88
+msgid "Gallery2 can be initialised?"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:106
+msgid "Gallery2 Version Compatible?"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:124
+msgid "Gallery2 Module: ImageBlock Active?"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:143
+msgid "Gallery2 Module: ImageFrame Active?"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:161
+msgid "WPG2 Output Page Type?"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:163
+msgid "Wordpress"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:165
+msgid "Gallery2"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:171
+msgid "WPG2 Gallery2 Rewrites Status?"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:185
+msgid "Embedded Page is using what Header type?"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:187
+msgid "WPG2HEADER"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:191
+#: wpg2/wpg2validate.inc:204
+msgid "Simple"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:199
+msgid "Embedded Page is using what Footer type?"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:201
+msgid "WPG2FOOTER"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:211
+msgid "Using Which WPG2 Stylesheet?"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:213
+msgid "External"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:216
+msgid "Internal"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:252
+#: wpg2/wpg2validate.inc:256
+msgid "WPG2 Status: "
+msgstr ""
+
+#: wpg2/wpg2validate.inc:252
+msgid "Not Valid"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:256
+msgid "Validated"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:267
+msgid "Error: Wordpress Build is NOT Compatible?"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:267
+msgid " WPG2 "
+msgstr ""
+
+#: wpg2/wpg2validate.inc:268
+msgid " requires a minimum Wordpress build of "
+msgstr ""
+
+#: wpg2/wpg2validate.inc:270
+msgid " and has detected your Wordpress build "
+msgstr ""
+
+#: wpg2/wpg2validate.inc:272
+msgid " does not meet the minimum build requirement."
+msgstr ""
+
+#: wpg2/wpg2validate.inc:278
+msgid "Error: Invalid URI to Gallery2"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:278
+msgid "The Gallery2 Embedded Page "
+msgstr ""
+
+#: wpg2/wpg2validate.inc:284
+msgid "Error: embed.php cannot be located in the specified File Path"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:285
+msgid "WPG2 plugin cannot locate the Gallery2 file "
+msgstr ""
+
+#: wpg2/wpg2validate.inc:286
+msgid "embed.php"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:293
+msgid "Error: Gallery2 cannot be initialised"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:293
+msgid "Check to ensure Gallery2 is correctly working and revalidate."
+msgstr ""
+
+#: wpg2/wpg2validate.inc:300
+msgid "Error: Gallery2 version is incompatible"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:300
+msgid "WPG2 plugin requires at least Gallery2 version "
+msgstr ""
+
+#: wpg2/wpg2validate.inc:301
+msgid ", Gallery2 reports you are running version "
+msgstr ""
+
+#: wpg2/wpg2validate.inc:308
+msgid "Error: Gallery2 Imageblock plugin is not activated"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:308
+msgid "Ensure the Gallery2 ImageBlock is installed / activated via the Gallery2 Site Admin -> Plugin Panel."
+msgstr ""
+
+#: wpg2/wpg2validate.inc:315
+msgid "Error: Gallery2 Imageframe plugin is not activated"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:315
+msgid "Ensure the Gallery2 ImageFrame is installed / activated via the Gallery2 Site Admin -> Plugin Panel."
+msgstr ""
+
+#: wpg2/wpg2validate.inc:322
+msgid "Warning: Gallery2 Rewrite Plugin was deactived"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:322
+msgid "WPG2 has automatically deactivated the Gallery2 Rewrite Plugin, to reactive, enable Gallery2 Rewrites in the WPG2 Gallery2 Rewrites Tab."
+msgstr ""
+
+#: wpg2/wpg2validate.inc:328
+msgid "Warning: Using the Simple Header"
+msgstr ""
+
+#: wpg2/wpg2validate.inc:328
+msgid "WPG2 will generate your Wordpress header using the CSS Elements specified in the embedded page options. For some Wordpress themes this will incorrectly distort the output from Gallery2 and instead you may need to create your own WPG2 Header."
+msgstr ""
+
+#: wpg2/wpg2widgets.inc:108
+msgid "Please Note: Gallery2 items to be displayed in this widget are configured in the WPG2 Sidebar Block Options Menu"
+msgstr ""
+
+#: wpg2/wpg2widgets.inc:109
+#: wpg2/wpg2widgets.inc:135
+#: wpg2/wpg2widgets.inc:159
+msgid "Title:"
+msgstr ""
+
+#: wpg2/wpg2widgets.inc:134
+msgid "Please Note: Gallery2 items to be displayed in this widget are configured in the WPG2 Sidebar Grid Block Options Menu"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:29
+msgid "Cheatin&#8217; uh?"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:35
+#: wpg2/wpg2usersadmin.php:104
+msgid "Fatal G2 error:"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:44
+msgid "Gallery2 User deleted and Wordpress Gallery2 User capability Revoked."
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:55
+msgid "Gallery2 User Created and Wordpress Gallery2 User capability Granted."
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:63
+msgid "Gallery2 admin capability Revoked."
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:73
+msgid "Gallery2 admin capability Granted."
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:117
+msgid "Manage Mapped Gallery2 <> Wordpress Users"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:118
+msgid "This page is for controlling the Gallery2 capabilities that are associated with each user."
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:123
+msgid "Wordpress Users with Gallery2 admin accounts"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:125
+#: wpg2/wpg2usersadmin.php:179
+#: wpg2/wpg2usersadmin.php:237
+msgid "WP ID"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:126
+#: wpg2/wpg2usersadmin.php:180
+#: wpg2/wpg2usersadmin.php:238
+msgid "G2 ID"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:127
+#: wpg2/wpg2usersadmin.php:181
+#: wpg2/wpg2usersadmin.php:239
+msgid "User Name"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:128
+#: wpg2/wpg2usersadmin.php:182
+#: wpg2/wpg2usersadmin.php:240
+msgid "Nickname"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:129
+#: wpg2/wpg2usersadmin.php:183
+#: wpg2/wpg2usersadmin.php:241
+msgid "Name"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:130
+#: wpg2/wpg2usersadmin.php:184
+#: wpg2/wpg2usersadmin.php:242
+msgid "Email"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:131
+#: wpg2/wpg2usersadmin.php:185
+#: wpg2/wpg2usersadmin.php:243
+msgid "Website"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:132
+#: wpg2/wpg2usersadmin.php:186
+#: wpg2/wpg2usersadmin.php:244
+msgid "Action"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:164
+#: wpg2/wpg2usersadmin.php:217
+#: wpg2/wpg2usersadmin.php:274
+msgid "e-mail: "
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:165
+#: wpg2/wpg2usersadmin.php:218
+#: wpg2/wpg2usersadmin.php:275
+msgid "website: "
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:167
+msgid "Revoke G2 Admin"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:177
+msgid "Wordpress Users without Gallery2 admin accounts"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:220
+msgid "Grant G2 Admin"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:221
+#: wpg2/wpg2usersadmin.php:224
+msgid "Revoke G2 User"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:235
+msgid "Wordpress Users without Gallery2 accounts"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:270
+msgid "NA"
+msgstr ""
+
+#: wpg2/wpg2usersadmin.php:276
+msgid "Grant G2 User"
+msgstr ""
+

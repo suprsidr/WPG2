@@ -1,0 +1,153 @@
+/*
+    Gallery 2 Image Chooser
+    Version 3.0.2 - updated 01 OCT 2007
+    Documentation: http://g2image.steffensenfamily.com/
+
+    Author: Kirk Steffensen with inspiration, code snipets,
+        and assistance as listed in CREDITS.HTML
+
+    Released under the GPL version 2.
+    A copy of the license is in the root folder of this plugin.
+
+    See README.HTML for installation info.
+    See CHANGELOG.HTML for a history of changes.
+*/
+
+/* Legacy CSS from TinyMCE */
+
+body {
+	background-color: #F0F0EE;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	margin: 8px;
+}
+
+table {
+	width: 100%;
+}
+
+td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+input {
+	background: #FFFFFF;
+	border: 1px solid #cccccc;
+}
+
+td, input, select, textarea {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+input, select, textarea {
+	border: 1px solid #808080;
+}
+
+input.radio {
+	border: 1px none #000000;
+	background-color: transparent;
+	vertical-align: middle;
+}
+
+input.checkbox {
+	border: 1px none #000000;
+	background-color: transparent;
+	vertical-align: middle;
+}
+
+fieldset {
+	border: 1px solid #919B9C;
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	padding: 0px;
+	margin: 0px;
+	padding: 4px;
+	clear: left
+}
+
+legend {
+	color: #2B6FB6;
+	font-weight: bold;
+}
+
+a:link, a:visited {
+	color: black;
+}
+
+a:hover {
+	color: #2B6FB6;
+}
+
+h1, h2, h3, h4 {
+	color: #2B6FB6;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 5px;
+}
+
+h3 {
+	font-size: 14px;
+}
+
+/* Specific Gallery2 Image Chooser CSS */
+
+img {
+	margin: 2px;
+	float: left;
+}
+
+form {
+	margin: 0px;
+}
+
+p {
+	margin: 4px;
+}
+
+.displayed_title {
+}
+
+.hidden_title {
+	display: none;
+}
+
+.active_placeholder {
+	clear: left;
+}
+
+.inactive_placeholder {
+}
+
+.thumbnail_imageblock {
+	border: 1px solid #919B9C;
+	margin:2px 2px 0px 0px;
+	padding: 2px;
+	float: left;
+}
+
+.title_imageblock {
+	border: 1px solid #919B9C;
+	margin:2px 0px 0px 0px;
+	padding: 2px;
+	clear: left;
+}
+
+.hidden_textbox {
+	display:none;
+}
+
+.displayed_textbox {
+	clear: left;
+}
+
+.about_button {
+	padding: 10px 0px 0px 0px;
+	clear: left;
+}
+
+.main {
+	float: left;
+	width: 100%;
+}

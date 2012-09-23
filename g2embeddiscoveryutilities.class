@@ -1,0 +1,541 @@
+<?php
+/*
+ * $RCSfile: G2EmbedDiscoveryUtilities.class,v $
+ *
+ * Gallery - a web based photo album viewer and editor
+ * Copyright (C) 2000-2006 Bharat Mediratta
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or (at
+ * your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street - Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+/**
+ * @version $Revision: 1.1 $ $Date: 2006/02/10 11:54:48 $
+ * @package GalleryCore
+ * @author Andy Staudacher <ast@gmx.ch>
+ */
+
+/**
+ * A collection of useful G2Embed related utilities to find the correct GalleryEmbed::init
+ * parameters
+ *
+ * @package GalleryCore
+ * @subpackage GalleryEmbed
+ * @static
+ */
+class G2EmbedDiscoveryUtilities {
+    /**
+     * Documentation:
+     * To use GalleryEmbed and its GalleryEmbed::init method to initialize G2, you need:
+     *   a) the absolute filesystem path to embed.php
+     *   b) embedUri, the URL of the entry point to your embedding application / embedded G2
+     *      e.g. http://example.com/ or just / , or http://example.com/index.php?mod=gallery
+     *   c) g2Uri, the URL path to G2, e.g. http://example.com/gallery2/ or just /gallery2/
+     *
+     * Methods to finding out the path to embed.php:
+     * ============================================
+     *
+     *   - It's a good assumption that you can find out or define embedUri easily
+     *   - g2Uri must be entered by the admin that configures the integration, just copy and paste
+     *     the URL of G2
+     *   - finding out embed.php is a little tricky.
+     *
+     *   We offer two methods to get embed.php. Do NOT call them for each request. Call them once
+     *   when configuring / installing your integration. Else you get a performance penalty.
+     *
+     *    1. If you ask the user to enter the g2Uri, you can call:
+     *        list ($success, $embedPhpPath, $errorString) =
+     *            G2EmbedDiscoveryUtilities::getG2EmbedPathByG2Uri($g2Uri);
+     *        if (!$success) {
+     *            print $errorString;
+     *            /* Tell the admin to enter the correct input
+     *        } else {
+     *            /* embedPhpPath is correct and you can store it in your config for later use
+     *        }
+     *
+     *    2. If you ask only for the g2Uri, you also need to provide the filesystem path to the
+     *       entry point (the filesystem path to the file that embedUri points to)
+     *       list ($success, $embedPhpPath, $errorString) =
+     *                  G2EmbedDiscoveryUtilities::getG2EmbedPathByG2UriEmbedUriAndLocation(
+     *                             $g2Uri, $embedUri, dirname(dirname(__FILE__)));
+     *        if (!$success) {
+     *            print $errorString;
+     *            /* Tell the admin to enter the correct input
+     *        } else {
+     *            /* embedPhpPath is correct and you can store it in your config for later use
+     *        }
+     *       Disadvantage of this method: it's less reliable. It won't work with Apache Alias,
+     *                                    or with subdomains, ...
+     *
+     *
+     * Method to normalize the g2Uri and embedUri before using them in GalleryEmbed::init:
+     * ==================================================================================
+     *
+     *   Do NOT call them on each request. Call them once to verify / sanitize user input
+     *   and then store them in your configuration.
+     *   - These methods try their best to be tolerant to common user mistakes and return a
+     *     string that GalleryEmbd::init accepts
+     *   - You don't have to call these methods before calling the above methods to get
+     *     embed.php, since it does that already internally
+     *
+     *   1. $g2Uri = G2EmbedDiscoveryUtilities::normalizeG2Uri($g2Uri);
+     *   2. $embedUri = G2EmbedDiscoveryUtilities::normalizeG2Uri($embedUri);
+     */
+
+    /**
+     * The format for g2Uri accepted by GalleryEmbed::init is quite strict and well defined
+     * missing traling / leading slashes have a meaning.
+     * This function is more tolerant for incorrect user input and tries to normalize the
+     * given g2Uri to a value that is probably what the user meant to provide
+     *
+     * The returned URI is either a server-relative URI (e.g. /gallery2/) or an absolute URI
+     * including the schema (e.g. http://example.com/gallery/)
+     *
+     * The file / query string part is always removed)
+     *
+     * @param string g2Uri
+     * @return string normalized g2Uri
+     */
+    function normalizeG2Uri($g2Uri) {
+	list ($schemaAndHost, $path, $file, $queryString, $fragment) =
+	    G2EmbedDiscoveryUtilities::_normalizeUri($g2Uri);
+
+	return $schemaAndHost . $path;
+    }
+
+    /**
+     * @see normalizeG2Uri
+     *
+     * Very similar, but file / query string is kept in the result
+     */
+    function normalizeEmbedUri($embedUri) {
+	list ($schemaAndHost, $path, $file, $queryString, $fragment) =
+	    G2EmbedDiscoveryUtilities::_normalizeUri($embedUri);
+
+	return $schemaAndHost . $path . $file . $queryString . $fragment;
+    }
+
+    /**
+     * Find the absolute filesystem path to G2's embed.php when given the g2Uri
+     *
+     * Returns false if the g2Uri is wrong. Can also fail if G2 and emApp are
+     * on different (sub)domains / IPs
+     *
+     * @param string the g2Uri, a full URL or a server-relative URI
+     * @return array boolean success,
+     *               string filesystem path of embed.php
+     *               string error string
+     */
+    function getG2EmbedPathByG2Uri($g2Uri) {
+	$g2Uri = trim($g2Uri);
+	if (empty($g2Uri)) {
+	    return array (false, null, "Bad parameter: the proved g2Uri is empty");
+	}
+
+	$g2Uri = G2EmbedDiscoveryUtilities::normalizeG2Uri($g2Uri);
+
+	/* Add a schema / host part to the g2Uri if necessary */
+	if (strpos($g2Uri, 'http') !== 0) {
+	    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 'https' : 'http';
+	    $host = !empty($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '127.0.0.1';
+	    $g2Uri = sprintf('%s://%s%s', $protocol, $host, $g2Uri);
+	}
+
+	$components = @parse_url($g2Uri);
+	if (!$components) {
+	    return array(false, null, "Unable to parse normalized URL $g2Uri. Please enter the " .
+			 "full address of your Gallery 2 installation.");
+	}
+	$port = empty($components['port']) ? 80 : $components['port'];
+	if (empty($components['path'])) {
+	    $components['path'] = '/';
+	}
+
+	$fd = @fsockopen($components['host'], $port, $errno, $errstr, 1);
+	if (empty($fd)) {
+	    return array(false, null, "Error $errno: '$errstr' retrieving $g2Uri");
+	}
+
+	$get = $components['path'] . 'embed.php?getEmbedPath=1';
+
+	/* Read the web page into a buffer */
+	$ok = fwrite($fd, sprintf("GET %s HTTP/1.0\r\n" .
+				  "Host: %s\r\n" .
+				  "\r\n",
+				  $get,
+				  $components['host']));
+	if (!$ok) {
+	    /* Zero bytes written or false was returned */
+	    $errorStr = "Verificatoin of Gallery 2 location failed. fwrite call failed for $g2Uri";
+	    if ($ok === false) {
+		$errorStr .= "\nreturn value was false";
+	    }
+	    return array(false, null, $errorStr);
+	}
+	$ok = fflush($fd);
+	if (!$ok) {
+	    if (version_compare(phpversion(), '4.2.0', '>=')) {
+		/* Ignore false returned from fflush on PHP 4.1 */
+		return array(false, null, "Verification of Gallery 2 location failed. " .
+			     "fflush call failed for $g2Uri");
+	    }
+	}
+
+	/*
+	 * Read the response code. fgets stops after newlines.
+	 * The first line contains only the status code (200, 404, etc.).
+	 */
+	$headers = array();
+	$response = trim(fgets($fd, 4096));
+
+	/* if the HTTP response code did not begin with a 2 this request was not successful */
+	if (!preg_match("/^HTTP\/\d+\.\d+\s2\d{2}/", $response)) {
+	    return array(false, null, "URL derived from $g2Uri returned $response");
+	}
+
+	/* Read the headers. */
+	while (!feof($fd)) {
+	    $line = trim(fgets($fd, 4096));
+	    if (empty($line)) {
+		break;
+	    }
+	    /* Normalize the line endings */
+	    $line = str_replace("\r", '', $line);
+
+	    list ($key, $value) = explode(':', $line, 2);
+	    $headers[$key] = trim($value);
+	}
+
+	$embedPhpPath = '';
+	if (isset($headers['X-G2-EMBED-PATH'])) {
+	    $embedPhpPath = $headers['X-G2-EMBED-PATH'];
+	} else {
+	    return array(false, null, "Either your server does not support the automated " .
+			 "verification of the Gallery 2 location or the supplied g2Uri " .
+			 "points to a incompativle Gallery 2 version (older than 2.1)");
+	}
+
+	if (empty($embedPhpPath)) {
+	    return array(false, null, "Correct URL, but the returned " .
+			 "embed.php path is empty (server error?!)");
+	}
+
+	/* Verify path */
+	list ($ok, $errorString) = @G2EmbedDiscoveryUtilities::isFileReadable($embedPhpPath);
+	if (!$ok) {
+	    return array(false, null, $errorString);
+	} else {
+	    return array(true, $embedPhpPath, null);
+	}
+    }
+
+    /**
+     * Get the absolute filesystem path to embed.php from the given g2Uri, embedUri and the
+     * absolute filesystem path of the entry point file of your embedding application
+     *
+     * Can be unreliable if short URLs are entered or if apache alias / symlinks are used
+     *
+     * @param string g2Uri
+     * @param string embedUri
+     * @param string the dirname of the location of the entry point of your embedding application
+     *        e.g. dirname(__FILE__) if your embedUri points right to your wrapper file or if your
+     *        wrapper file is in the same directory as the entry point to your emApp
+     *        e.g. dirname(dirname(dirname(__FILE__))) if your wrapper is in a
+     *        modules/g2integration/wrapper.inc.php file, which is 2 subdirectories deeper than
+     *        the actual entry point that embedUri is pointing to
+     * @return array boolean success,
+     *               string absolute filesystem path to embed.php,
+     *               string errorString
+     */
+
+    function getG2EmbedPathByG2UriEmbedUriAndLocation($g2Uri, $embedUri, $dirnameOfEmApp) {
+	if (empty($dirnameOfEmApp)) {
+	    return array(false, null, 'dirname of embedding application is empty');
+	}
+	/* Normalize g2Uri, embedUri */
+	list ($schemaAndHost, $path, $file, $queryString, $fragment) =
+	    G2EmbedDiscoveryUtilities::_normalizeUri($g2Uri);
+	$g2Path = $path;
+	list ($schemaAndHost, $path, $file, $queryString, $fragment) =
+	    G2EmbedDiscoveryUtilities::_normalizeUri($embedUri);
+	$embedPath = $path;
+
+	/* Normalize path separators */
+	$dirnameOfEmApp = str_replace(DIRECTORY_SEPARATOR, '/', $dirnameOfEmApp);
+	/* Remove trailing slash */
+	if (substr($dirnameOfEmApp, -1) == '/') {
+	    $dirnameOfEmApp = substr($dirnameOfEmApp, 0, strlen($dirnameOfEmApp) - 1);
+	}
+
+	/*
+	 * Do some directory traversal to translate g2Path + embedPath + dirnameOfEmApp
+	 * to path to embed.php
+	 * path
+	 * Example: g2Path = /baz/bar/gallery2/ , embedPath = /baz/cms/foo/ ,
+	 *          dirnameOfEmApp = /home/john/www/cms/foo/
+	 * 1. Remove as many dirs from the end of dirnameOfEmApp as embedPath has
+	 * 2. append g2Path to dirnameOfEmApp
+	 */
+	$numberOfSubDirs = count(explode('/', $embedPath));
+	/* Don't count the one before the leading and after the traling slash */
+	$numberOfSubDirs -= 2;
+
+	$pathElements = explode('/', $dirnameOfEmApp);
+	$max = 30; /* prevent infinite loop */
+	while ($numberOfSubDirs-- > 0 && $max-- > 0) {
+	    array_pop($pathElements);
+	}
+
+	$embedPhpPath = join('/', $pathElements) . $g2Path . 'embed.php';
+
+	/* Convert / back to platform specific directory separator */
+	$embedPhpPath = str_replace('/', DIRECTORY_SEPARATOR, $embedPhpPath);
+
+	/* Verify path */
+	list ($ok, $errorString) = @G2EmbedDiscoveryUtilities::isFileReadable($embedPhpPath);
+	if (!$ok) {
+	    return array(false, null, $errorString);
+	} else {
+	    return array(true, $embedPhpPath, null);
+	}
+    }
+
+    /**
+     * Verify the URI's is correct..
+     * Can be unreliable if short URLs are entered
+     *
+     * @param string Uri
+     * @return array boolean success, string errormessage
+     */
+
+    function verifyUri($Uri) {
+	$Uri = trim($Uri);
+	if (empty($Uri)) {
+	    return array (false, "Verification Failed: the Uri is empty");
+	}
+
+	/* Add a schema / host part to the Uri if necessary */
+	if (strpos($Uri, 'http') !== 0) {
+	    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 'https' : 'http';
+	    $host = !empty($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '127.0.0.1';
+	    $g2Uri = sprintf('%s://%s%s', $protocol, $host, Uri);
+	}
+
+	$components = @parse_url($Uri);
+	if (!$components) {
+	    return array(true);
+	}
+	$port = empty($components['port']) ? 80 : $components['port'];
+	if (empty($components['path'])) {
+	    $components['path'] = '/';
+	}
+
+	$fd = @fsockopen($components['host'], $port, $errno, $errstr, 1);
+	if (empty($fd)) {
+	    return array(true);
+	}
+
+	/* Read the web page into a buffer */
+	$ok = fwrite($fd, sprintf("GET %s HTTP/1.0\r\n" .
+				  "Host: %s\r\n" .
+				  "\r\n",
+				  $Uri,
+				  $components['host']));
+	if (!$ok) {
+	    /* Zero bytes written or false was returned */
+	    $errorStr = "Verification Failed. fwrite call failed for $Uri";
+	    if ($ok == false) {
+		$errorStr .= "\nreturn value was false";
+	    }
+	    return array(true);
+	}
+	$ok = fflush($fd);
+	if (!$ok) {
+	    if (version_compare(phpversion(), '4.2.0', '>=')) {
+		/* Ignore false returned from fflush on PHP 4.1 */
+		return array(true);
+	    }
+	}
+
+	/*
+	 * Read the response code. fgets stops after newlines.
+	 * The first line contains only the status code (200, 404, etc.).
+	 */
+	$headers = array();
+	$response = trim(fgets($fd, 4096));
+
+	/* if the HTTP response code is a 4 this request was not successful */
+	if (preg_match("/^HTTP\/\d+\.\d+\s4\d{2}/", $response)) {
+			return array(false, "$Uri returned $response");
+	}
+
+	return array(true);
+
+    }
+
+
+    /**
+     * Helper function for normalizeG2Uri and normalizeEmbedUri
+     *
+     * @access private
+     */
+    function _normalizeUri($uri) {
+	$uri = trim($uri);
+	if (empty($uri)) {
+	    return array('', '/', '', '', '');
+	}
+	$schema = $host = $schemaAndHost = $path = $file = '';
+	$fragment = $queryString = '';
+
+	/* Normalize path separators */
+	$uri = str_replace("\\", '/', $uri);
+
+	/*
+	 * With schema (http://) -> easy to identify host
+	 * A single slash:
+	 *     www.example.com/
+	 *     www.example.com/gallery2
+	 *     www.example.com/index.php
+	 *     gallery2/
+	 *     /
+	 *     /gallery2
+	 *     /index.php
+	 *     gallery2/index.php
+	 * Multiple slashes:
+	 *     www.example.com/gallery2/
+	 *     /gallery2/
+	 *     ....
+	 * Problem: Differentiate between host, path and file
+	 *   @files: .php|.html? is recognized as file
+	 *   @host:  (?:\w+:\w+@)[\w\.]*\w+\.\w{2-4}(?::\d+) is most likely a host string
+	 *           localhost or other host strings without a dot are impossible to
+	 *           differentiate from path names ->only http://localhost accepted
+	 *   @path:  everything that is not a file or a host
+	 */
+
+	/* Remove fragment / query string */
+	if (($pos = strpos($uri, '#')) !== false) {
+	    $fragment = substr($uri, $pos);
+	    $uri = substr($uri, 0, $pos);
+	}
+	if (($pos = strpos($uri, '?')) !== false) {
+	    $queryString = substr($uri, $pos);
+	    $uri = substr($uri, 0, $pos);
+	}
+
+	/* Handle and remove file part */
+	if (preg_match('{(.*/)?([\w\.]+\.(?:php|html?))$}i', $uri, $matches)) {
+	    $uri = empty($matches[1]) ? '/' : $matches[1];
+	    $file = $matches[2];
+	}
+
+	/* Get the schema and host for absolute URLs */
+	if (preg_match('{^(https?://)([^/]+)(.*)$}i', $uri, $matches)) {
+	    $schema = strtolower($matches[1]);
+	    $host = $matches[2];
+	    $schemaAndHost = $schema . $host;
+	    $uri = empty($matches[3]) ? '/' : $matches[3];
+	    $uri = $uri{0} != '/' ? '/' . $uri : $uri;
+	} else {
+	    /* Get the host string, e.g. from www.example.com/foo or www.example.com */
+	    if (preg_match('{^((?:\w+:\w+@)?[\w\.]*\w+\.\w+(?::\d+)?)(.*)$}', $uri, $matches)) {
+		$host = $matches[1];
+		$schema = 'http://';
+		if ( !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
+		    $schema = 'https://';
+		}
+		$schemaAndHost = $schema . $host;;
+		$uri = empty($matches[2]) ? '/' : $matches[2];
+		$uri = $uri{0} != '/' ? '/' . $uri : $uri;
+	    }
+	}
+
+	/* Add leading / trailing slash to path */
+	$path = $uri{0} != '/' ? '/' . $uri : $uri;
+	$path .= substr($path, -1) != '/' ? '/' : '';
+
+	return array($schemaAndHost, $path, $file, $queryString, $fragment);
+    }
+
+    function isFileReadable($path) {
+	if (@file_exists($path) && @is_readable($path)) {
+	    return array(true, null);
+	} else if (@G2EmbedDiscoveryUtilities::_isRestrictedByOpenBaseDir($path)) {
+	    return array(false, "file $path is restricted by PHP open_basedir");
+	} else if (@file_exists($path) && !@is_readable($path)) {
+	    return array(false, "file $path exists but is not readable");
+	} else {
+	    return array(false, "file $path does not exist");
+	}
+    }
+
+    /**
+     * Return true if the path provided is not allowed by the current open_basedir configuration.
+     *
+     * Copied from GalleryPlatform and adjusted to be independent of the G2 framework
+     *
+     * @return true if the path is restricted
+     */
+    function _isRestrictedByOpenBaseDir($path) {
+	$slash = DIRECTORY_SEPARATOR;
+	if (!strncasecmp(PHP_OS, 'win', 3)) {
+	    $separator = ';';
+	    $caseSensitive = false;
+	} else {
+	    $separator = ':';
+	    $caseSensitive = true;
+	}
+
+	$openBasedir = @ini_get('open_basedir');
+	if (empty($openBasedir)) {
+	    return false;
+	}
+
+	if (($realpath = realpath($path)) === false) {
+	    /*
+	     * PHP's open_basedir will actually take an invalid path, resolve relative
+	     * paths, parse out .. and . and then check against the dir list..
+	     * Here we do an ok job of doing the same, though it isn't perfect.
+	     */
+	    $s = '\\\/';  /* do this by hand because preg_quote() isn't reliable */
+	    if (!preg_match("{^([a-z]+:)?[$s]}i", $path)) {
+		$path = getcwd() . $slash . $path;
+	    }
+	    for ($realpath = $path, $lastpath = ''; $realpath != $lastpath;) {
+		$realpath = preg_replace("#[$s]\.([$s]|\$)#", $slash, $lastpath = $realpath);
+	    }
+
+	    for ($lastpath = ''; $realpath != $lastpath;) {
+		$realpath = preg_replace("#[$s][^$s]+[$s]\.\.([$s]|\$)#",
+					 $slash, $lastpath = $realpath);
+	    }
+	}
+
+	$function = $caseSensitive ? 'strncmp' : 'strncasecmp';
+	foreach (explode($separator, $openBasedir) as $baseDir) {
+	    if (($baseDirMatch = realpath($baseDir)) === false) {
+		$baseDirMatch = $baseDir;
+	    } else if ($baseDir{strlen($baseDir)-1} == $slash) {
+		/* Realpath will remove a trailing slash.. add it back to avoid prefix match */
+		$baseDirMatch .= $slash;
+	    }
+	    /* Add slash on path so /dir is accepted if /dir/ is a valid basedir */
+	    if (!$function($baseDirMatch, $realpath . $slash, strlen($baseDirMatch))) {
+		return false;
+	    }
+	}
+
+	return true;
+    }
+}
+?>

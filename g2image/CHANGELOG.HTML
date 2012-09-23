@@ -1,0 +1,237 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Gallery2 Image Chooser CHANGELOG.HTML</title>
+	<link rel="stylesheet" href="css/readme.css" type="text/css" />
+</head>
+<body>
+
+<div id="main" >
+
+<h2>Gallery 2 Image Chooser</h2>
+<p>Author: Kirk Steffensen<br />
+Webpage: <a href="http://g2image.steffensenfamily.com/">g2image.steffensenfamily.com</a>
+
+<h3>Changelog</h3>
+
+<p><strong>Version 3.0.2 - Released 10/05/07</strong>
+<ul>
+<li>Fixed a bug where WPG2 tags and Drupal G2 Filter tags for individual images failed if G2 ImageBlock version was older than 1.0.9.  Now degrades gracefully.
+</ul>
+</p>
+
+<p><strong>Version 3.0.1 - Released 09/26/07</strong>
+<ul>
+<li>Updated prototype.js, scriptalicious.js, and effects.js to most recent versions.  This allows the plugin and LightBox to function correctly on Safari and Opera.
+<li>Fixed a bug where the custom alignment classes were not transferred from the WPG2 G2Image options tab to G2Image.
+<li>Fixed a bug where Chinese Traditional translation was not working on some servers.
+<li>Changed to use full URLs instead of server-relative URLs so that blog entries will display images in web-based RSS aggregators.
+<li>Updated the Italian, Polish, and Chinese Traditional translations.
+</ul>
+</p>
+
+<p><strong>Version 3.0 - Released 09/16/07</strong>
+<ul>
+<li>GUI reorganization.
+<ul>
+<li>Visual directory tree instead of breadcrumbs
+<li>Insertion options on a fixed pane to the side
+<li>Ability to select multiple images for insertion with the current insertion options
+</ul>
+<li>Switched from php array method of internationalization to the standard gettext method.
+<li>Improved LightBox HTML tag by adding a variable slideshow group name (In 2.2.2 it defaulted to g2image)
+<li>Added support for the WPG2 tag "size" attribute. (Images only, not albums, because Gallery2 only stores a thumbnail for the album highlight, not resizes)
+<li>Added support for the Drupal G2 Filter tag "exactsize" attribute.  (Images only, not albums.)
+<li>Added "All" as a "thumbnails per page" option.
+<li>An added benefit of reorganizing the backend in v3.0 is that G2Image now fully honors Gallery2 user permissions.  It picks up the current user's permissions from the Gallery2 session cookie and applies them.
+</ul>
+</p>
+
+<p><strong>Version 2.2.2 - Released 8/26/07</strong>
+<ul>
+<li>Fixed a bug where thumbnail and fullsized image URLs were incorrect if the Gallery2 directory was not /gallery2/
+</ul>
+</p>
+</p>
+
+<p><strong>Version 2.2.1 - Released 8/25/07</strong>
+<ul>
+<li>Enabled use with Gallery2 v2.1.x by improving the method for finding the root album (allows for use of the better method in G2 2.2, but still allows use with G2 2.1).
+</ul>
+</p>
+
+<p><strong>Version 2.2 - Released 8/24/07</strong>
+<ul>
+<li>Eliminated use of G2 ImageBlock call in the backend.  This eases getting information about a Gallery2 item.
+<li>Updated the Album selection so that it loads all albums in a tree and automatically reload the page on album selection.
+<li>Added support for a LightBox HTML tag and fullsized image HTML tags.
+<li>Added FCKEditor integration.
+<li>Cleaned up the GUI a little (made the "sort by" and "images per page" select boxes force a redraw automatically instead of
+requiring another button press.)
+</ul>
+</p>
+
+<p><strong>Version 2.1 - Released only for WPG2 2.1 - Changes included in 2.2</strong>
+<ul>
+<li>Updated WPG2 support for WP 2.1 with TinyMCE plugins in the WP plugin directory
+<li>Updated all TinyMCE API calls to comply with TinyMCE 2.0.3+.  These updated files had been in a separate directory, but version 2.1 drops support for TinyMCE 2.0.2 and below.
+</ul>
+</p>
+
+<p><strong>Version 2.0 - Released 3/25/06</strong>
+<ul>
+<li>Gallery 2.1 support.  NOT BACKWARDS COMPATIBLE WITH GALLERY2 2.0.X
+<li>Rolled changes from 1.3.1 and 1.3.2 back up to the 2.0 branch. Primarily support for non-WordPress embedded applications.
+<li>Tied G2Image to a WPG2 quicktag so that it can be used outside of the WordPress rich-text editor
+<li>Added support for WPG2ID tags
+<li>Added hooks for configuration from WPG2 Rich-Text Editor Admin Panel
+<li>Changed WPG2 validation check to allow for renamed wp-gallery2.php
+<li>Added "Default Action" option
+<li>Added the ability to remember the last album visited on a per-browser-session basis
+<li>Added WP Filters to WPG2 g2embed, so that a modified tiny_mce_gzip.php is no longer required
+<li>Added image-only insert option
+<li>Added "About G2Image" button with version info, etc in a popup alert
+<li>Added Drupal Gallery2 Filter Support
+<li>Changed g2image main popup window language support to en.php so that the language tags will already be loaded when the window opens.  For WordPress, the language loaded will be the one set by WordPress WPLANG in wp-config.php.
+<li>Added a editor_plugin_src.js file and compacted editor_plugin.js
+<li>Added files to support TinyMCE version 2.0.3+
+<li>Added a Joomla! JCE g2image.xml installation file and zipped a separate JCE file
+</ul>
+</p>
+
+<p><strong>Version 1.3.5 - Released 03/22/06</strong>
+<ul>
+<li>Fixed a bug in the WPG2 tags when not using TinyMCE
+<li>Added a editor_plugin_src.js file and compacted editor_plugin.js
+<li>Added a Drupal G2 Filter prefix variable
+<li>Added files to support TinyMCE version 2.0.3+
+<li>Added a Joomla! JCE g2image.xml installation file and zipped a separate JCE file
+</ul>
+</p>
+
+<p><strong>Version 1.3.4 - Released 03/12/06</strong>
+<ul>
+<li>Fixed bug in WPG2 initialization for servers where $_SERVER['PHP_SELF'] returns the
+wrong value
+<li>Added the option to define full Gallery2 directory path instead of relative Gallery2
+path
+<li>Forced G2Image window to come to the front on selection if already open
+<li>Made G2Image language file automatically load the same language as WordPress WPLANG
+</ul>
+</p>
+
+<p><strong>Version 1.3.3 - Released 03/04/06</strong>
+<ul>
+<li>Fixed bug in WPG2 initialization introduced in 1.3.2
+<li>Improved the alignment of the "About G2Image" button
+<li>Corrected zh_TW.php
+</ul>
+</p>
+
+<p><strong>Version 1.3.2 - Released 03/01/06</strong>
+<ul>
+<li>Rearranged config.php and init.php to make it easier to configure embedded application
+paths
+<li>Fixed bug in "non-WPG2" initialization
+</ul>
+</p>
+
+<p><strong>Version 1.3.1 - Released 02/28/06</strong>
+<ul>
+<li>Corrected localization support for the WordPress plugin
+<li>Fixed bug in "Thumbnail Only" option.  Output incorrectly had &lt;/a&gt; at the end.
+<li>Fixed bug in "non-WPG2" initialization
+</ul>
+</p>
+
+<p><strong>Version 1.3 - Released 02/26/06</strong>
+<ul>
+<li>Gallery 2.0.x version with changes brought backward from G2Image v2.0 development
+<li>Tied G2Image to a WPG2 quicktag so that it can be used outside of the WordPress rich-text editor
+<li>Added support for WPG2ID tags
+<li>Added hooks for configuration from WPG2 Rich-Text Editor Admin Panel
+<li>Changed WPG2 validation check to allow for renamed wp-gallery2.php
+<li>Added "Default Action" option
+<li>Added the ability to remember the last album visited on a per-browser-session basis
+<li>Added WP Filters to WPG2 g2embed, so that a modified tiny_mce_gzip.php is no longer required
+<li>Added image-only insert option
+<li>Added "About G2Image" button with version info, etc in a popup alert
+<li>Added Drupal Gallery2 Filter Support
+<li>Changed g2image main popup window language support to en.php so that the language tags will already be loaded when the window opens
+</ul>
+</p>
+
+<p><strong>Version 1.2 - Released 01/27/06</strong>
+<ul>
+<li>Added the ability to determine the results of clicking on an image - either
+insert using the default settings or show advanced options.  Whether or not
+this is user configurable can be set in config.php.
+<li>Fixed a bug that caused g2image to die if there were files in the Gallery2
+data directory structure that were not in the Gallery2 album structure.
+<li>Added Gallery2 image titles to the display and added the ability to sort
+images based on Gallery2 titles.
+<li>Fixed a bug that prevented use in standalone mode (i.e., not using WPG2).
+<li>Changed the album navigation from directory names to Gallery2 album names.
+<li>Added the ability to display in either a thumbnail-only view or thumbnails
+with filenames.
+<li>Added the ability to change the number of thumbnails displayed.
+<li>Added more error statements to aid in troubleshooting.
+<li>Cleaned up the CSS so that the plugin displays consistently in both FireFox
+and IE.
+<li>Added the ability to choose an alignment class for the thumbnails (none,
+g2image_normal, g2image_float_left, g2image_float_right, g2image_centered).  Can
+also add up to four custom classes.  Implemented as &ltimg class=...&gt or
+&ltdiv class=...&gt wrappers, as set in config.php.
+<li>Implemented the TinyMCE Language Pack to ease translation.
+<li>Added a tiny_mce_gzip.php file for WordPress 2.0.  Adds g2image plugin and
+<wpg2> tags.
+<li>Reorganized the initialization sequence to make it easier for developers of
+embedded apps (e.g., PHPNuke, Drupal, etc.) to add their own init functions
+without having to modify any of the other code.
+<li>Added .bmp and .svg to the default valid-image extensions.
+</ul>
+</p>
+
+<p><strong>Version 1.1 - Released 01/08/06</strong>
+<ul>
+<li>Fixed a bug where some servers do not properly respond to
+$_SERVER[SCRIPT_NAME]
+<li>Simplified config.php by automating most path discovery
+<li>Added the ability to preserve <wpg2> tags and to edit them
+<li>Added the ability to insert <wpg2> tags instead of raw HTML
+<li>Added the ability to link to a custom URL
+<li>Changed the directory navigation to make it more compact for a directory with
+multiple subdirectories.
+<li>Fixed a bug where the "Insert Thumbnail with Link to Parent Album" button did
+not work if URL rewrite was not active on Gallery2
+</ul>
+</p>
+
+<p><strong>Version 1.02 - Released 01/04/06</strong>
+<ul>
+<li>Correctly fixed the bug in parsing the gallery URL when inserting a thumbnail
+or text with a link to the parent gallery.
+</ul>
+</p>
+
+<p><strong>Version 1.01 - Released 01/03/06</strong>
+<ul>
+<li>[Attempted to] Fixed a bug in parsing the gallery URL when inserting a
+thumbnail or text with a link to the parent gallery.
+<li>Updated the README.TXT file with info on finding the Gallery2 root-album
+directory and how to update the CSS file for images in the editor pane.
+<li>Added this CHANGELOG.TXT file.
+<li>Deleted two functions.js files left over from beta testing.
+<li>Removed an extraneous comment block from editor_plugin.js.
+</ul>
+</p>
+
+<p><strong>Version 1.0 - Released 01/02/06</strong>
+<ul>
+<li>Baseline
+</ul>
+</p>
+
+</div>
+
+</body>
+</html>
